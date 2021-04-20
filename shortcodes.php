@@ -123,10 +123,13 @@ add_shortcode( 'feature-image', 'feature_image_func' );
 function mos_pricing_form_func($atts = array(), $content = '') {
 	$atts = shortcode_atts( array(
         'email' => 'template-1',
+        'redirect_url' => '',
 	), $atts, 'mos-pricing-form' );
     ob_start(); ?>
         <div class="form-container">
-            <form action="">
+            <form action="" method="post">
+                <?php wp_nonce_field( 'mos_pricing_form_action', 'mos_pricing_form_field' ); ?>
+
                 <div class="part-1">
                     <div class="input-part">
                         <div class="settings-wrapper">
