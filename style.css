@@ -1,0 +1,96 @@
+/**
+Theme Name: Astra Child
+Author: Md. Mostak Shahid
+Author URI: http://mdmostakshahid.com/
+Description: Astra is the fastest, fully customizable & beautiful theme suitable for blogs, personal portfolios and business websites. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Astra comes with schema.org code integrated so search engines will love your site. Astra offers plenty of sidebar options and widget areas giving you a full control for customizations. Furthermore, we have included special features and templates so feel free to choose any of your favorite page builder plugin to create pages flexibly. Some of the other features: # WooCommerce Ready # Responsive # Compatible with major plugins # Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained & Supported by Brainstorm Force. Looking for a perfect base theme? Look no further. Astra is fast, fully customizable and beautiful theme!
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: astra-child
+Template: astra
+*/
+.bg-f8fafd {
+    background-color: #f8fafd!important;
+}
+.text-center,.menu-item-center ul li *{
+    text-align: center!important;
+}
+.position-relative{
+    position: relative;
+}
+.flex-direction-row-reverse .eael-advance-tabs.eael-tabs-vertical {
+    flex-direction: row-reverse;
+}
+
+.elementor-20 .elementor-element.flex-direction-row-reverse .eael-advance-tabs.eael-tabs-vertical > .eael-tabs-nav > ul li:after{
+    border-right: 10px solid #444;
+    border-left: 0;
+    border-right-color: #FF6600;
+    left: -10px!important;
+    right: auto;
+}
+.media {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.media-body {
+  -ms-flex: 1;
+  flex: 1;
+}
+.media-link-menu {
+    display: block;
+    color: #FF6600;
+}
+.media-link-menu h4 {
+    font-weight: 600;
+    font-size: 15px;
+    color: #666666;
+    margin-bottom: 0;
+}
+.media-link-menu:hover,.media-link-menu:hover h4 {
+    color: #FF6600;
+}
+/*#mega-menu-wrap-primary #mega-menu-primary li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row {
+    border-top: 5px solid #FF6600;
+}*/
+#mega-menu-wrap-primary #mega-menu-primary li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row.fat-padding{
+    padding: 25px;
+}
+#mega-menu-wrap-primary #mega-menu-primary li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row.no-padding{
+    padding: 0;
+}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item h4.mega-block-title, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item h4.mega-block-title {
+    color: #1e2022;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+ul.menu {
+    margin: 0;
+    list-style: none;
+}
+.media-link-menu + .media-link-menu {border-top: 2px solid #eaeaea;padding-top: 20px;margin-top: 20px;}
+
+#mega-menu-wrap-primary #mega-menu-primary li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row .mega-menu-column > ul.mega-sub-menu > li.mega-menu-item .menu li a {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #1e2022;
+    font-size: 14px;
+    display: block;
+}
+#mega-menu-wrap-primary #mega-menu-primary li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row .mega-menu-column.no-padding > ul.mega-sub-menu > li.mega-menu-item {
+    padding: 0;
+}
+.mr-3 {
+  margin-right: 1rem !important;
+}
+.mb-0{ margin-right: 0 !important;}
+.align-self-center {
+  -ms-flex-item-align: center !important;
+  align-self: center !important;
+}
+@media (max-width:768px) {
+    .hide-on-768 {display: none!important}
+}
