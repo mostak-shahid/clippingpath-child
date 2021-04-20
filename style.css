@@ -3,7 +3,7 @@ Theme Name: Astra Child
 Author: Md. Mostak Shahid
 Author URI: http://mdmostakshahid.com/
 Description: Astra is the fastest, fully customizable & beautiful theme suitable for blogs, personal portfolios and business websites. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Astra comes with schema.org code integrated so search engines will love your site. Astra offers plenty of sidebar options and widget areas giving you a full control for customizations. Furthermore, we have included special features and templates so feel free to choose any of your favorite page builder plugin to create pages flexibly. Some of the other features: # WooCommerce Ready # Responsive # Compatible with major plugins # Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained & Supported by Brainstorm Force. Looking for a perfect base theme? Look no further. Astra is fast, fully customizable and beautiful theme!
-Version: 1.0.1
+Version: 1.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: astra-child
@@ -91,6 +91,106 @@ ul.menu {
   -ms-flex-item-align: center !important;
   align-self: center !important;
 }
+.row {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.form-container {
+    max-width: 960px;
+    width: 100%;
+    margin: auto;
+    padding: 4.1vw 0;
+    box-shadow: 0 20px 80px -20px rgb(0 0 0 / 38%);
+}
+.form-container .part-1{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+.form-container .part-1 .settings-wrapper h3 {
+    color: #FF6600;
+    font-family: var( --e-global-typography-primary-font-family ), Sans-serif;
+    font-weight: var( --e-global-typography-primary-font-weight );
+    margin-bottom: 50px;
+}
+.form-container .part-1 .settings-wrapper .base-input,.form-container .part-2 .input-field {
+    width: 100%;
+}
+.form-container label {
+    margin-bottom: 10px;  
+    display: block;  
+    color: #2c3c62;
+    font-weight: 400;
+}
+.form-container .part-1 label {
+    font-size: 25px;
+    line-height: 1em;
+}
+.form-container .form-field {
+    margin-bottom: 50px;
+}
+.form-container .input-part,.form-container .calculator-part {
+    min-width: 50%;    
+    padding: 0 4.1vw;
+}
+.form-container .calculator-part {
+    border-left: 1px solid #eaeaea;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+}
+.form-container .calculator-part .default-text{
+    text-align: center;
+    border: 1px solid #dddddd;
+    padding: 30px;
+    border-radius: 5px;
+}
+.form-container .calculator-part .label {
+    text-align: left;
+    font-size: inherit;
+    padding: 0;
+    font-weight: 300;
+    color: #2c3c62;
+    font-style: italic;
+    display: inline-block;
+    width: 100px;
+}
+.form-container .calculator-part .value {
+    color: #2c3c62;
+    font-weight: 600;
+}
+.form-container .calculator-part .btn-next-step {
+    margin-top: 20px;
+}
+.form-container .calculator-part .service-image {
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,.05); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0.05);
+}
+.form-container .part-2 .input-wrap {margin-bottom: 15px;}
 @media (max-width:768px) {
     .hide-on-768 {display: none!important}
 }
