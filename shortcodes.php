@@ -122,22 +122,24 @@ add_shortcode( 'feature-image', 'feature_image_func' );
 
 function mos_pricing_form_func($atts = array(), $content = '') {
 	$atts = shortcode_atts( array(
-        'email' => 'template-1',
+        'admin' => 'to.hasannaim@gmail.com',
         'redirect_url' => '',
 	), $atts, 'mos-pricing-form' );
+    $current_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    $redirect_url = ($atts['redirect_url'])?$atts['redirect_url']:$current_link;
     ob_start(); ?>
         <div class="form-container">
-            <form action="" method="post">
+            <form method="post">
                 <?php wp_nonce_field( 'mos_pricing_form_action', 'mos_pricing_form_field' ); ?>
-
+                <input name="admin" type="hidden" value="<?php echo $atts['admin'] ?>">
+                <input name="redirect" type="hidden" value="<?php echo $redirect_url ?>">
                 <div class="part-1">
                     <div class="input-part">
                         <div class="settings-wrapper">
                             <h3>Calculate your estimate</h3>
                             <div class="form-field">
                                 <label for="service">Select a service*</label>
-                                <select id="mos-services" name="services[]" class="mos-services base-input" required>
-                                   
+                                <select id="mos-services" name="services" class="mos-services base-input" required>                                   
                                     <option value="" data-price="0.00">Select a Service</option>
                                     <option value="Clipping Path" data-price="0.25">Clipping Path</option>
                                     <option value="Image Background Removal" data-price="0.25">Image Background Removal</option>
@@ -149,12 +151,11 @@ function mos_pricing_form_func($atts = array(), $content = '') {
                                     <option value="Ghost Mannequin" data-price="0.75">Ghost Mannequin</option>
                                     <option value="Drop Shadow" data-price="0.15">Drop Shadow</option>
                                     <option value="Image Masking" data-price="0.50">Image Masking</option>
-                                                                        
                                 </select>
                             </div>
                             <div class="form-field">
                                 <label for="quantity">Enter quantity*</label>
-                                <input type="number" name="quantity[]" class="quantity base-input" data-validation="required" placeholder="Enter quantity" value="0" min="0">
+                                <input type="number" name="quantity" class="quantity base-input" required placeholder="Enter quantity" value="0" min="0">
                             </div>
                         </div>
                     </div>
@@ -222,7 +223,7 @@ function mos_pricing_form_func($atts = array(), $content = '') {
                             <div class="col">
                                 <div class="input-wrap">
                                     <label for="dimention">Dimention</label>
-                                    <input type="text" name="dimention" id="dimention" class="dimention input-field" required placeholder="width x height">
+                                    <input type="text" name="dimention" id="dimention" class="dimention input-field" placeholder="width x height">
                                 </div>                                 
                             </div>
                         </div>                        
