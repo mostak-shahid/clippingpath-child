@@ -191,6 +191,10 @@ ul.menu {
     box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0.05);
 }
 .form-container .part-2 .input-wrap {margin-bottom: 15px;}
-@media (max-width:768px) {
+/*@media (max-width:768px) {
     .hide-on-768 {display: none!important}
+}*/
+@media (max-width:767px) {
+    .hide-on-768 {display: none!important}
+    #banner-section .elementor-heading-title:after {display: none;}
 }
